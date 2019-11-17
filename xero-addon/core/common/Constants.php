@@ -29,13 +29,15 @@ class Constants {
     const INI_MONGO   = 'mongo';
     
     // INI keys
-    const INI_LOGGING_LEVEL  = 'level';
-    const INI_XERO_KEY       = 'key';
-    const INI_XERO_SECRET    = 'secret';
-    const INI_MONGO_DATABASE = 'database';
-    const INI_MONGO_USER     = 'user';
-    const INI_MONGO_PASSWORD = 'password';
-    const INI_MONGO_HOST     = 'host';
+    const INI_LOGGING_LEVEL    = 'level';
+    const INI_XERO_KEY         = 'key';
+    const INI_XERO_SECRET      = 'secret';
+    const INI_XERO_CERTIFICATE = 'certificate';
+    const INI_XERO_CALLBACK    = 'callback';
+    const INI_MONGO_DATABASE   = 'database';
+    const INI_MONGO_USER       = 'user';
+    const INI_MONGO_PASSWORD   = 'password';
+    const INI_MONGO_HOST       = 'host';
 
 }
 

@@ -22,7 +22,8 @@ class MyLogger {
         if (!self::$logger instanceof Logger) {
             $cfg = Config::getInstance();
             $cfg->load();
-            self::$logger = new Logger('../../log/', $cfg->get(Constants::INI_LOGGING, Constants::INI_LOGGING_LEVEL), array (
+
+            self::$logger = new Logger('../log/', $cfg->get(Constants::INI_LOGGING, Constants::INI_LOGGING_LEVEL), array (
                 'extension' => 'log', // changes the log file extension
             ));
         }

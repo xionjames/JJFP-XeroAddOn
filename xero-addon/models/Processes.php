@@ -1,5 +1,7 @@
 <?php
 
+namespace JJFP\Db\Model;
+
 use JJFP\Db\Model;
 
 class Processes extends Model {

@@ -35,7 +35,7 @@ class Config
     public function load()
     {
         if (!$this->isLoaded()) {
-            $this->settings = parse_ini_file( Constants::FILE_INI_APP, true );
+            $this->settings = parse_ini_file( '../' . Constants::FILE_INI_APP, true );
 
             return $this->isLoaded();
         }
