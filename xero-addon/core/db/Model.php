@@ -74,14 +74,8 @@ abstract class Model {
             return false;
         }
 
-        // connect
-        $this->logger->info("Connecting to database...");
-
         try {
-            $mongoClient = new \MongoDB\Client($this->getMongoUri());
-
-            $this->logger->info("Getting Collection $this->collection...");
-            $coll = $mongoClient->{$this->db}->{$this->collection};
+            $coll = $this->getCollectionObj();
 
             // save!
             $this->logger->info("Inserting/Updating " . sizeof($this->data) . " records...");
@@ -89,7 +83,7 @@ abstract class Model {
             foreach ($this->data as $entry) {
                 $result = $coll->updateOne( 
                     [ Model::XERO_ID_FIELD => $entry[Model::XERO_ID_FIELD] ],
-                    [ '$set' => $entry ], 
+                    [ '$set' => $this->includeSavedDate($entry) ], 
                     [ 'upsert' => true ] 
                 );
                 array_push($modifieds, $result->getModifiedCount());
@@ -102,6 +96,25 @@ abstract class Model {
         }
     }
 
+    private function includeSavedDate($entry) {
+        $date = gmdate('Y-m-d', time());
+        $time = gmdate('H:i:s', time());
+
+        return array_merge($entry, array( "SavedAt" => $date . 'T' . $time . '+00:00' ));
+    }
+
+    private function getCollectionObj() {
+        // connect
+        $this->logger->info("Connecting to database...");
+
+        $mongoClient = new \MongoDB\Client($this->getMongoUri());
+
+        $this->logger->info("Getting Collection $this->collection...");
+        $coll = $mongoClient->{$this->db}->{$this->collection};
+
+        return $coll;
+    }
+
     /**
      * Build Mongo Connection URI
      */
@@ -112,6 +125,10 @@ abstract class Model {
         $host = $this->cfg->get(Constants::INI_MONGO, Constants::INI_MONGO_HOST);
 
         $uri = "mongodb://$user:$pass@$host/$this->db?ssl=false";
+    }
+
+    public function exec() {
+        
     }
 }
 
