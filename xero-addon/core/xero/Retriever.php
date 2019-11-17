@@ -14,6 +14,7 @@ class Retriever {
     private $cfg;
     private $logger;
     private $error = '';
+    private $totalRecords = 0;
 
     function __construct($ent) {
         $this->entity = $ent;
@@ -74,7 +75,8 @@ class Retriever {
                     array_push($returnData, $entry);
                 }
 
-                $this->logger->debug('Received data count: ' . sizeof($returnData));
+                $this->totalRecords = sizeof($returnData);
+                $this->logger->debug('Received data count: ' . $this->totalRecords);
 
                 return $returnData;
             } else {
@@ -100,6 +102,10 @@ class Retriever {
 
     public function getError() {
         return $this->error;
+    }
+
+    public function getTotalRecords() {
+        return $this->totalRecords;
     }
 }
 
