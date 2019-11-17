@@ -1,0 +1,8 @@
+{
+    "require": {
+        "katzgrau/klogger": "dev-master",
+        "webonyx/graphql-php": "^0.13.8",
+        "calcinai/xero-php": "^1.9",
+        "mongodb/mongodb": "^1.0.0"
+    }
+}

@@ -1,0 +1,12 @@
+[2019-11-16 21:55:33.303184] [info] Returned a million search results
+[2019-11-16 21:55:33.320487] [error] Oh dear.
+[2019-11-16 21:59:43.260054] [info] :	Returned a million search results
+[2019-11-16 21:59:43.260334] [error] Oh dear.
+[2019-11-16 22:00:11.002373] [info] _FILE_:_LINE_\tReturned a million search results
+[2019-11-16 22:00:11.002568] [error] Oh dear.
+[2019-11-16 22:00:36.814529] [info] /home/xionjames/workspaces.local/VSCode/JJFP-XeroAddOn/xero-addon/test/logs.php:9\tReturned a million search results
+[2019-11-16 22:00:36.814651] [error] Oh dear.
+[2019-11-16 22:00:52.890655] [info] /home/xionjames/workspaces.local/VSCode/JJFP-XeroAddOn/xero-addon/test/logs.php:9\tReturned a million search results
+[2019-11-16 22:00:52.890777] [error] Oh dear.
+[2019-11-16 22:01:26.876022] [info] logs.php:9\tReturned a million search results
+[2019-11-16 22:01:26.876303] [error] Oh dear.
