@@ -13,9 +13,18 @@ abstract class Model {
     private $cfg;
     protected $key;
     protected $fields;
-    private $logger;
+    protected $logger;
     private $db;
+    private $inserted = 0;
+    private $matched  = 0;
+    private $modified = 0;
+
     const XERO_ID_FIELD = 'xero_id';
+
+    public const UPDATE = 0;
+    public const INSERT = 1;
+    public const FIND   = 2;
+
 
     public function __construct() {
         $this->collection = strtolower((new \ReflectionClass($this))->getShortName());//strtolower(get_class($this));
@@ -79,30 +88,28 @@ abstract class Model {
 
             // save!
             $this->logger->info("Inserting/Updating " . sizeof($this->data) . " records...");
-            $modifieds = array();
+            
             foreach ($this->data as $entry) {
                 $result = $coll->updateOne( 
                     [ Model::XERO_ID_FIELD => $entry[Model::XERO_ID_FIELD] ],
                     [ '$set' => $this->includeSavedDate($entry) ], 
                     [ 'upsert' => true ] 
                 );
-                array_push($modifieds, $result->getModifiedCount());
+
+                // calculate results
+                $this->inserted += $result->getUpsertedCount();
+                $this->matched  += $result->getMatchedCount();
+                $this->modified += $result->getModifiedCount();
             }
 
-
-        } catch (MongoDB\Driver\Exception\ConnectionTimeoutException $e)
-        {
+        } catch (MongoDB\Driver\Exception\ConnectionTimeoutException $e) {
             $this->logger->error("Error connecting to database " . $e->getMessage());
         }
     }
 
-    private function includeSavedDate($entry) {
-        $date = gmdate('Y-m-d', time());
-        $time = gmdate('H:i:s', time());
-
-        return array_merge($entry, array( "SavedAt" => $date . 'T' . $time . '+00:00' ));
-    }
-
+    /**
+     * Attempt to connect to Mongo and obtain "collection" object
+     */
     private function getCollectionObj() {
         // connect
         $this->logger->info("Connecting to database...");
@@ -113,6 +120,23 @@ abstract class Model {
         $coll = $mongoClient->{$this->db}->{$this->collection};
 
         return $coll;
+    }
+
+    /**
+     * Add new field SavedAt for every retrieved record from Xero
+     */
+    private function includeSavedDate($entry) {
+        return array_merge($entry, array( "SavedAt" => $this->getUTCDate() ));
+    }
+
+    /**
+     * Obtain a String UTC date
+     */
+    protected function getUTCDate() {
+        $date = gmdate('Y-m-d', time());
+        $time = gmdate('H:i:s', time());
+
+        return $date . 'T' . $time . '+00:00';
     }
 
     /**
@@ -127,8 +151,63 @@ abstract class Model {
         $uri = "mongodb://$user:$pass@$host/$this->db?ssl=false";
     }
 
-    public function exec() {
-        
+    /**
+     * Get results of "normal" process
+     */
+    public function getResults() {
+        return array(
+            "inserted" => $this->inserted,
+            "matched"  => $this->matched,
+            "modified" => $this->modified
+        );
+    }
+
+    /**
+     * Just for special cases.
+     * Executes a "custom" mongo operation
+     */
+    public function exec($operation, $first = array(), $second = array(), $third = array()) {
+        try {
+            $coll = $this->getCollectionObj();
+
+            switch ($operation) {
+                case Model::FIND:
+                    $this->logger->debug("Finding...");
+
+                    $result = $coll->find($first);
+
+                    return $result;
+                    break;
+
+                case Model::INSERT:
+                    $this->logger->debug("Inserting new record...");
+
+                    $result = $coll->insert($first);
+
+                    $this->logger->info("New record inserted with ID: " . $result->getInsertedId());
+
+                    return $result->getInsertedId();
+                    break;
+
+                case Model::UPDATE:
+                    $this->logger->debug("Updating record " . implode(',', $first));
+
+                    $result = $coll->updateOne(
+                        $first,
+                        $second,
+                        $third
+                    );
+
+                    $this->logger->info("Updating result count: " . $result->getModifiedCount());
+
+                    return $result->getModifiedCount();
+                    break;
+            }
+
+        } catch (MongoDB\Driver\Exception\ConnectionTimeoutException $e) {
+            $this->logger->error("Error connecting to database " . $e->getMessage());
+            return null;
+        }
     }
 }
 
