@@ -173,9 +173,9 @@ abstract class Model {
                 case Model::FIND:
                     $this->logger->debug("Finding...");
 
-                    $result = $coll->find($first);
+                    $result = $coll->find($first, $second);
 
-                    return $result;
+                    return $result->toArray();
                     break;
 
                 case Model::INSERT:

@@ -1,6 +1,6 @@
 <?php
 
-namespace JJFP\Db\Model;
+namespace JJFP\Db\Models;
 
 use JJFP\Db\Model;
 

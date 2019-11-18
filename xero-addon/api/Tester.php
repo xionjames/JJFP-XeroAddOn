@@ -5,9 +5,10 @@ namespace JJFP\Api;
 require_once '../includes.php';
 
 use JJFP\Xero\Retriever;
-use JJFP\Db\Model\Vendors;
-use JJFP\Db\Model\Accounts;
-use JJFP\Db\Model\Processes;
+use JJFP\Db\Model;
+use JJFP\Db\Models\Vendors;
+use JJFP\Db\Models\Accounts;
+use JJFP\Db\Models\Processes;
 use JJFP\Exception\ProcessException;
 
 class Tester {
@@ -69,5 +70,12 @@ class Tester {
 $t = new Tester();
 $t->process();
 
+/*
+$ac = new Accounts();
+$result = $ac->exec(Model::FIND, [], [
+    'sort' => ['Name' => 1]
+]);
 
+print_r($result);
+*/
 ?>
