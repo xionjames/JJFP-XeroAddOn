@@ -57,7 +57,7 @@ class Processes extends Model {
     /**
      * Update the process record on mongo
      */
-    public function update($action, $state) {
+    public function update($action, $state, $records = array()) {
         $result = $this->exec(
             Model::UPDATE,
             array(
@@ -68,10 +68,13 @@ class Processes extends Model {
                     'UpdatedAt' => $this->getUTCDate()
                 ),
                 '$push' => array(
-                    'Log' => array(
-                        'Action' => $action,
-                        'State'  => $state,
-                        'Date'   => $this->getUTCDate()
+                    'Log' => array_merge(
+                        array(
+                            'Action' => $action,
+                            'State'  => $state,
+                            'Date'   => $this->getUTCDate()
+                        ),
+                        $records
                     )
                 )
             )

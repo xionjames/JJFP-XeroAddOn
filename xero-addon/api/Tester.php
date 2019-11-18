@@ -44,13 +44,13 @@ class Tester {
             
             throw new ProcessException("Error retrieving $api data", 2);
         }
-        $this->proc->update('Retrieving ' . $api . 's', Processes::STATE_OK);
+        $this->proc->update('Retrieving ' . $api . 's', Processes::STATE_OK, array( 'Records' => $ret->getTotalRecords() ));
 
         // save 
-        $acc = $model == 'Vendors' ? new Vendors() : new Accounts();
-        $acc->set($data);
-        if ($acc->save() == true) {
-            $this->proc->update('Saving ' . $model . 's', Processes::STATE_OK);
+        $mod = $model == 'Vendors' ? new Vendors() : new Accounts();
+        $mod->set($data);
+        if ($mod->save() == true) {
+            $this->proc->update('Saving ' . $model . 's', Processes::STATE_OK, array( 'Records' => $mod->getResults() ));
         } else {
             $this->proc->update('Saving ' . $model . 's', Processes::STATE_ERROR);
 
