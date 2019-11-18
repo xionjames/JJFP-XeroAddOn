@@ -1,0 +1,530 @@
+[2019-11-18 0:10:47.501893] [info] Connecting to database...
+[2019-11-18 0:10:47.503151] [info] Getting Collection processes...
+[2019-11-18 0:10:47.506752] [debug] Inserting new record...
+[2019-11-18 0:11:26.010308] [info] Connecting to database...
+[2019-11-18 0:11:26.011450] [info] Getting Collection processes...
+[2019-11-18 0:11:26.014934] [debug] Inserting new record...
+[2019-11-18 0:11:26.118057] [info] New record inserted with ID: 5dd227fe7926ef038927ee32
+[2019-11-18 0:11:26.118319] [info] Loading certificate content...
+[2019-11-18 0:11:26.118577] [debug] Certificate content loaded!
+[2019-11-18 0:11:26.121751] [debug] Xero config loaded!
+[2019-11-18 0:11:27.440658] [info] Xero data retrieved!
+[2019-11-18 0:11:27.444350] [debug] Received data count: 45
+[2019-11-18 0:12:09.159249] [info] Connecting to database...
+[2019-11-18 0:12:09.160481] [info] Getting Collection processes...
+[2019-11-18 0:12:09.163988] [debug] Inserting new record...
+[2019-11-18 0:12:09.167068] [info] New record inserted with ID: 5dd228297926ef04584b5b92
+[2019-11-18 0:12:09.167306] [info] Loading certificate content...
+[2019-11-18 0:12:09.167546] [debug] Certificate content loaded!
+[2019-11-18 0:12:09.170598] [debug] Xero config loaded!
+[2019-11-18 0:12:10.193454] [info] Xero data retrieved!
+[2019-11-18 0:12:10.197235] [debug] Received data count: 45
+[2019-11-18 0:12:10.197453] [info] Connecting to database...
+[2019-11-18 0:12:10.197638] [info] Getting Collection processes...
+[2019-11-18 0:12:10.197824] [debug] Updating record 5dd228297926ef04584b5b92
+[2019-11-18 0:12:10.241791] [info] Updating result count: 1
+[2019-11-18 0:27:45.480142] [info] Connecting to database...
+[2019-11-18 0:27:45.481277] [info] Getting Collection processes...
+[2019-11-18 0:27:45.485121] [debug] Inserting new record...
+[2019-11-18 0:27:45.488457] [info] New record inserted with ID: 5dd22bd17926ef0e3f033e82
+[2019-11-18 0:27:45.488706] [info] Loading certificate content...
+[2019-11-18 0:27:45.488941] [debug] Certificate content loaded!
+[2019-11-18 0:27:45.492341] [debug] Xero config loaded!
+[2019-11-18 0:27:46.108578] [info] Xero data retrieved!
+[2019-11-18 0:27:46.112298] [debug] Received data count: 45
+[2019-11-18 0:27:46.112514] [info] Connecting to database...
+[2019-11-18 0:27:46.112701] [info] Getting Collection processes...
+[2019-11-18 0:27:46.112894] [debug] Updating record 5dd22bd17926ef0e3f033e82
+[2019-11-18 0:27:46.115968] [info] Updating result count: 1
+[2019-11-18 0:27:46.116221] [debug] Original entry field count: 13
+[2019-11-18 0:27:46.116380] [debug] Cleaned entry field count: 8
+[2019-11-18 0:27:46.116513] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.116681] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.116815] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.116938] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.117063] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.117189] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.117316] [debug] Original entry field count: 10
+[2019-11-18 0:27:46.117444] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.117562] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.117691] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.117819] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.117947] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.118069] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.118194] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.118314] [debug] Original entry field count: 10
+[2019-11-18 0:27:46.118437] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.118560] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.118685] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.118812] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.118938] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.119062] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.119193] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.119348] [debug] Original entry field count: 10
+[2019-11-18 0:27:46.119570] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.119756] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.119885] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.120007] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.120206] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.120336] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.120460] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.120583] [debug] Original entry field count: 10
+[2019-11-18 0:27:46.120781] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.120913] [debug] Original entry field count: 11
+[2019-11-18 0:27:46.121041] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.121162] [debug] Original entry field count: 10
+[2019-11-18 0:27:46.121287] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.121406] [debug] Original entry field count: 10
+[2019-11-18 0:27:46.121529] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.121648] [debug] Original entry field count: 10
+[2019-11-18 0:27:46.121771] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.121891] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.122018] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.122140] [debug] Original entry field count: 10
+[2019-11-18 0:27:46.122262] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.122381] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.122503] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.122628] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.122750] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.122870] [debug] Original entry field count: 11
+[2019-11-18 0:27:46.122993] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.123116] [debug] Original entry field count: 13
+[2019-11-18 0:27:46.123239] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.123362] [debug] Original entry field count: 12
+[2019-11-18 0:27:46.123488] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.123657] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.123790] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.123914] [debug] Original entry field count: 11
+[2019-11-18 0:27:46.124038] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.124161] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.124288] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.124411] [debug] Original entry field count: 10
+[2019-11-18 0:27:46.124536] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.124659] [debug] Original entry field count: 11
+[2019-11-18 0:27:46.124782] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.124907] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.125032] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.125155] [debug] Original entry field count: 19
+[2019-11-18 0:27:46.125283] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.125406] [debug] Original entry field count: 11
+[2019-11-18 0:27:46.125529] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.125653] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.125776] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.125895] [debug] Original entry field count: 10
+[2019-11-18 0:27:46.126019] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.126143] [debug] Original entry field count: 11
+[2019-11-18 0:27:46.126271] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.126394] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.126516] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.126713] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.126844] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.126967] [debug] Original entry field count: 10
+[2019-11-18 0:27:46.127095] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.127264] [debug] Original entry field count: 10
+[2019-11-18 0:27:46.127415] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.127540] [debug] Original entry field count: 9
+[2019-11-18 0:27:46.127737] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.127965] [debug] Original entry field count: 12
+[2019-11-18 0:27:46.128175] [debug] Cleaned entry field count: 6
+[2019-11-18 0:27:46.128319] [info] Connecting to database...
+[2019-11-18 0:27:46.128503] [info] Getting Collection vendors...
+[2019-11-18 0:27:46.128676] [info] Inserting/Updating 45 records...
+[2019-11-18 0:27:46.163081] [info] Connecting to database...
+[2019-11-18 0:27:46.163392] [info] Getting Collection processes...
+[2019-11-18 0:27:46.163708] [debug] Updating record 5dd22bd17926ef0e3f033e82
+[2019-11-18 0:27:46.164599] [info] Updating result count: 1
+[2019-11-18 0:27:46.164896] [info] Loading certificate content...
+[2019-11-18 0:27:46.165198] [debug] Certificate content loaded!
+[2019-11-18 0:27:46.165371] [debug] Xero config loaded!
+[2019-11-18 0:27:46.551570] [info] Xero data retrieved!
+[2019-11-18 0:27:46.553391] [debug] Received data count: 58
+[2019-11-18 0:27:46.553615] [info] Connecting to database...
+[2019-11-18 0:27:46.553800] [info] Getting Collection processes...
+[2019-11-18 0:27:46.554032] [debug] Updating record 5dd22bd17926ef0e3f033e82
+[2019-11-18 0:27:46.556256] [info] Updating result count: 1
+[2019-11-18 0:27:46.556514] [debug] Original entry field count: 16
+[2019-11-18 0:27:46.556668] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.556797] [debug] Original entry field count: 16
+[2019-11-18 0:27:46.556926] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.557050] [debug] Original entry field count: 15
+[2019-11-18 0:27:46.557245] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.557436] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.557566] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.557694] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.557866] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.558017] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.558145] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.558269] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.558463] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.558590] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.558718] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.558854] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.559039] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.559164] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.559290] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.559428] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.559552] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.559762] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.559912] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.560086] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.560213] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.560333] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.560457] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.560581] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.560705] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.560827] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.560951] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.561074] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.561197] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.561320] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.561440] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.561563] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.561682] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.561810] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.562001] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.562128] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.562249] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.562413] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.562570] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.562716] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.562855] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.563035] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.563163] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.563283] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.563463] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.563630] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.563771] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.563894] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.564073] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.564218] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.564347] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.564485] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.564668] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.564795] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.564919] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.565109] [debug] Original entry field count: 15
+[2019-11-18 0:27:46.565243] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.565366] [debug] Original entry field count: 15
+[2019-11-18 0:27:46.565515] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.565733] [debug] Original entry field count: 15
+[2019-11-18 0:27:46.565867] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.565993] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.566132] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.566309] [debug] Original entry field count: 15
+[2019-11-18 0:27:46.566440] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.566562] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.566752] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.566881] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.567006] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.567164] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.567374] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.567502] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.567677] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.567830] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.568000] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.568125] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.568254] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.568460] [debug] Original entry field count: 15
+[2019-11-18 0:27:46.568593] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.568712] [debug] Original entry field count: 15
+[2019-11-18 0:27:46.568840] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.568963] [debug] Original entry field count: 15
+[2019-11-18 0:27:46.569088] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.569214] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.569336] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.569461] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.569587] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.569709] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.569833] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.569956] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.570084] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.570207] [debug] Original entry field count: 15
+[2019-11-18 0:27:46.570331] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.570455] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.570576] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.570702] [debug] Original entry field count: 13
+[2019-11-18 0:27:46.570826] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.570949] [debug] Original entry field count: 15
+[2019-11-18 0:27:46.571073] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.571194] [debug] Original entry field count: 15
+[2019-11-18 0:27:46.571347] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.571485] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.571665] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.571798] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.571923] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.572102] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.572241] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.572412] [debug] Original entry field count: 15
+[2019-11-18 0:27:46.572541] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.572663] [debug] Original entry field count: 14
+[2019-11-18 0:27:46.572791] [debug] Cleaned entry field count: 7
+[2019-11-18 0:27:46.572926] [info] Connecting to database...
+[2019-11-18 0:27:46.573122] [info] Getting Collection accounts...
+[2019-11-18 0:27:46.573290] [info] Inserting/Updating 58 records...
+[2019-11-18 0:27:46.624263] [info] Connecting to database...
+[2019-11-18 0:27:46.624511] [info] Getting Collection processes...
+[2019-11-18 0:27:46.624669] [debug] Updating record 5dd22bd17926ef0e3f033e82
+[2019-11-18 0:27:46.625524] [info] Updating result count: 1
+[2019-11-18 0:27:46.625773] [info] Connecting to database...
+[2019-11-18 0:27:46.625932] [info] Getting Collection processes...
+[2019-11-18 0:27:46.626077] [debug] Updating record 5dd22bd17926ef0e3f033e82
+[2019-11-18 0:27:46.626919] [info] Updating result count: 1
+[2019-11-18 0:30:50.501133] [info] Connecting to database...
+[2019-11-18 0:30:50.502600] [info] Getting Collection processes...
+[2019-11-18 0:30:50.506819] [debug] Inserting new record...
+[2019-11-18 0:30:50.510385] [info] New record inserted with ID: 5dd22c8a7926ef102172e912
+[2019-11-18 0:30:50.510636] [info] Loading certificate content...
+[2019-11-18 0:30:50.511010] [debug] Certificate content loaded!
+[2019-11-18 0:30:50.515044] [debug] Xero config loaded!
+[2019-11-18 0:30:51.232588] [info] Xero data retrieved!
+[2019-11-18 0:30:51.236947] [debug] Received data count: 45
+[2019-11-18 0:30:51.237186] [info] Connecting to database...
+[2019-11-18 0:30:51.237487] [info] Getting Collection processes...
+[2019-11-18 0:30:51.237799] [debug] Updating record 5dd22c8a7926ef102172e912
+[2019-11-18 0:30:51.241190] [info] Updating result count: 1
+[2019-11-18 0:31:53.572205] [info] Connecting to database...
+[2019-11-18 0:31:53.573473] [info] Getting Collection processes...
+[2019-11-18 0:31:53.577069] [debug] Inserting new record...
+[2019-11-18 0:31:53.580365] [info] New record inserted with ID: 5dd22cc97926ef11284c1aa2
+[2019-11-18 0:31:53.580611] [info] Loading certificate content...
+[2019-11-18 0:31:53.580859] [debug] Certificate content loaded!
+[2019-11-18 0:31:53.584028] [debug] Xero config loaded!
+[2019-11-18 0:31:54.722769] [info] Xero data retrieved!
+[2019-11-18 0:31:54.727294] [debug] Received data count: 45
+[2019-11-18 0:31:54.727550] [info] Connecting to database...
+[2019-11-18 0:31:54.727921] [info] Getting Collection processes...
+[2019-11-18 0:31:54.728254] [debug] Updating record 5dd22cc97926ef11284c1aa2
+[2019-11-18 0:31:54.732012] [info] Updating result count: 1
+[2019-11-18 0:31:54.732398] [debug] Original entry field count: 13
+[2019-11-18 0:31:54.732675] [debug] Cleaned entry field count: 8
+[2019-11-18 0:31:54.732933] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.733191] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.733438] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.733679] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.733913] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.734158] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.734400] [debug] Original entry field count: 10
+[2019-11-18 0:31:54.734646] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.734893] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.735145] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.735382] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.735652] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.735898] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.736145] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.736418] [debug] Original entry field count: 10
+[2019-11-18 0:31:54.736668] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.736913] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.737162] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.737396] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.737637] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.737878] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.738122] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.738358] [debug] Original entry field count: 10
+[2019-11-18 0:31:54.738604] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.738846] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.739089] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.739325] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.739566] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.739831] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.740082] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.740320] [debug] Original entry field count: 10
+[2019-11-18 0:31:54.740569] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.740808] [debug] Original entry field count: 11
+[2019-11-18 0:31:54.741053] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.741296] [debug] Original entry field count: 10
+[2019-11-18 0:31:54.741543] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.741780] [debug] Original entry field count: 10
+[2019-11-18 0:31:54.742018] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.742260] [debug] Original entry field count: 10
+[2019-11-18 0:31:54.742508] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.742750] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.742990] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.743227] [debug] Original entry field count: 10
+[2019-11-18 0:31:54.743472] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.743748] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.743999] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.744237] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.744481] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.744712] [debug] Original entry field count: 11
+[2019-11-18 0:31:54.744955] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.745197] [debug] Original entry field count: 13
+[2019-11-18 0:31:54.745439] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:54.745667] [debug] Original entry field count: 12
+[2019-11-18 0:31:54.745876] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.746099] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.746330] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.746557] [debug] Original entry field count: 11
+[2019-11-18 0:31:54.746795] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.747025] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.747258] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.747488] [debug] Original entry field count: 10
+[2019-11-18 0:31:54.747756] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:54.747982] [debug] Original entry field count: 11
+[2019-11-18 0:31:54.748198] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.748424] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.748667] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.748908] [debug] Original entry field count: 19
+[2019-11-18 0:31:54.749156] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:54.749394] [debug] Original entry field count: 11
+[2019-11-18 0:31:54.749638] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.749876] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.750118] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.750360] [debug] Original entry field count: 10
+[2019-11-18 0:31:54.750602] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.750839] [debug] Original entry field count: 11
+[2019-11-18 0:31:54.751085] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:54.751353] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.751619] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.751858] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.752100] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.752334] [debug] Original entry field count: 10
+[2019-11-18 0:31:54.752566] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:54.752790] [debug] Original entry field count: 10
+[2019-11-18 0:31:54.753034] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.753273] [debug] Original entry field count: 9
+[2019-11-18 0:31:54.753524] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.753761] [debug] Original entry field count: 12
+[2019-11-18 0:31:54.753993] [debug] Cleaned entry field count: 6
+[2019-11-18 0:31:54.754244] [info] Connecting to database...
+[2019-11-18 0:31:54.754564] [info] Getting Collection vendors...
+[2019-11-18 0:31:54.754868] [info] Inserting/Updating 45 records...
+[2019-11-18 0:31:54.793319] [info] Connecting to database...
+[2019-11-18 0:31:54.793526] [info] Getting Collection processes...
+[2019-11-18 0:31:54.793657] [debug] Updating record 5dd22cc97926ef11284c1aa2
+[2019-11-18 0:31:54.794233] [info] Updating result count: 1
+[2019-11-18 0:31:54.794426] [info] Loading certificate content...
+[2019-11-18 0:31:54.794609] [debug] Certificate content loaded!
+[2019-11-18 0:31:54.794718] [debug] Xero config loaded!
+[2019-11-18 0:31:55.425776] [info] Xero data retrieved!
+[2019-11-18 0:31:55.427453] [debug] Received data count: 58
+[2019-11-18 0:31:55.427721] [info] Connecting to database...
+[2019-11-18 0:31:55.427911] [info] Getting Collection processes...
+[2019-11-18 0:31:55.428080] [debug] Updating record 5dd22cc97926ef11284c1aa2
+[2019-11-18 0:31:55.430068] [info] Updating result count: 1
+[2019-11-18 0:31:55.430299] [debug] Original entry field count: 16
+[2019-11-18 0:31:55.430448] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.430573] [debug] Original entry field count: 16
+[2019-11-18 0:31:55.430701] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.430826] [debug] Original entry field count: 15
+[2019-11-18 0:31:55.430958] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.431082] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.431209] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.431330] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.431457] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.431576] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.431823] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.431951] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.432075] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.432199] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.432322] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.432446] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.432568] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.432692] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.432818] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.432938] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.433058] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.433178] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.433305] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.433427] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.433551] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.433675] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.433795] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.433917] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.434041] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.434160] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.434288] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.434407] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.434534] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.434658] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.434807] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.434931] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.435055] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.435178] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.435307] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.435426] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.435554] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.435729] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.435857] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.435978] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.436100] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.436220] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.436347] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.436465] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.436590] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.436716] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.436844] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.436969] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.437092] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.437211] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.437334] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.437457] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.437577] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.437700] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.437825] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.437946] [debug] Original entry field count: 15
+[2019-11-18 0:31:55.438067] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.438190] [debug] Original entry field count: 15
+[2019-11-18 0:31:55.438317] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.438437] [debug] Original entry field count: 15
+[2019-11-18 0:31:55.438561] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.438685] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.438807] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.438926] [debug] Original entry field count: 15
+[2019-11-18 0:31:55.439049] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.439193] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.439320] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.439445] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.439569] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.439753] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.439879] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.440001] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.440124] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.440248] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.440371] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.440494] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.440618] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.440737] [debug] Original entry field count: 15
+[2019-11-18 0:31:55.440865] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.440984] [debug] Original entry field count: 15
+[2019-11-18 0:31:55.441111] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.441235] [debug] Original entry field count: 15
+[2019-11-18 0:31:55.441359] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.441481] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.441601] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.441725] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.441849] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.441973] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.442099] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.442219] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.442343] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.442465] [debug] Original entry field count: 15
+[2019-11-18 0:31:55.442603] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.442725] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.442847] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.442974] [debug] Original entry field count: 13
+[2019-11-18 0:31:55.443097] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.443217] [debug] Original entry field count: 15
+[2019-11-18 0:31:55.443344] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.443464] [debug] Original entry field count: 15
+[2019-11-18 0:31:55.443603] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.443732] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.443856] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.443983] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.444107] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.444227] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.444350] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.444470] [debug] Original entry field count: 15
+[2019-11-18 0:31:55.444591] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.444715] [debug] Original entry field count: 14
+[2019-11-18 0:31:55.444835] [debug] Cleaned entry field count: 7
+[2019-11-18 0:31:55.444967] [info] Connecting to database...
+[2019-11-18 0:31:55.445142] [info] Getting Collection accounts...
+[2019-11-18 0:31:55.445307] [info] Inserting/Updating 58 records...
+[2019-11-18 0:31:55.482449] [info] Connecting to database...
+[2019-11-18 0:31:55.482708] [info] Getting Collection processes...
+[2019-11-18 0:31:55.482884] [debug] Updating record 5dd22cc97926ef11284c1aa2
+[2019-11-18 0:31:55.483689] [info] Updating result count: 1
+[2019-11-18 0:31:55.483937] [info] Connecting to database...
+[2019-11-18 0:31:55.484102] [info] Getting Collection processes...
+[2019-11-18 0:31:55.484263] [debug] Updating record 5dd22cc97926ef11284c1aa2
+[2019-11-18 0:31:55.485017] [info] Updating result count: 1

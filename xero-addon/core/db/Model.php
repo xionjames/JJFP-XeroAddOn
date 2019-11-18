@@ -104,7 +104,10 @@ abstract class Model {
 
         } catch (MongoDB\Driver\Exception\ConnectionTimeoutException $e) {
             $this->logger->error("Error connecting to database " . $e->getMessage());
+            return false;
         }
+
+        return true;
     }
 
     /**
@@ -182,7 +185,7 @@ abstract class Model {
                 case Model::INSERT:
                     $this->logger->debug("Inserting new record...");
 
-                    $result = $coll->insert($first);
+                    $result = $coll->insertOne($first);
 
                     $this->logger->info("New record inserted with ID: " . $result->getInsertedId());
 
