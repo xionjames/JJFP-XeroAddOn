@@ -60,16 +60,12 @@ abstract class Model {
      * Clean one entry
      */
     private function clean($entry) {
-        $this->logger->debug("Original entry field count: " . sizeof($entry));
-
         $newEntry = array();
         foreach ($this->fields as $field) {
             if (isset($entry[$field])) {
                 $newEntry[$field == $this->key ? Model::XERO_ID_FIELD : $field] = $entry[$field];
             }
         }
-
-        $this->logger->debug("Cleaned entry field count: " . sizeof($newEntry));
 
         return $newEntry;
     }

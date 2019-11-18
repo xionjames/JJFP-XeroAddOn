@@ -46,6 +46,11 @@ class Tester {
         }
         $this->proc->update('Retrieving ' . $api . 's', Processes::STATE_OK, array( 'Records' => $ret->getTotalRecords() ));
 
+        if ($ret->getTotalRecords() == 0) {
+            // Nothing to save
+            return;
+        }
+
         // save 
         $mod = $model == 'Vendors' ? new Vendors() : new Accounts();
         $mod->set($data);
