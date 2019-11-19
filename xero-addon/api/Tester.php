@@ -6,8 +6,6 @@ require_once '../includes.php';
 
 use JJFP\Xero\Retriever;
 use JJFP\Db\Model;
-use JJFP\Db\Models\Vendors;
-use JJFP\Db\Models\Accounts;
 use JJFP\Db\Models\Processes;
 use JJFP\Exception\ProcessException;
 
@@ -53,7 +51,8 @@ class Tester {
         }
 
         // save 
-        $mod = $model == 'Vendors' ? new Vendors() : new Accounts();
+        $class = "JJFP\\Db\\Models\\$model";
+        $mod = new $class();
         $mod->set($data);
         if ($mod->save() == true) {
             $this->proc->update('Saving ' . $model . 's', Processes::STATE_OK, array( 'Records' => $mod->getResults() ));
