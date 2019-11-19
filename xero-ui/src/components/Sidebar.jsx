@@ -33,7 +33,7 @@ class Sidebar extends React.Component {
             className="simple-text logo-mini"
           >
             <div className="logo-img">
-              <li className="fa fa-puzzle-piece fa-2x" />
+              <li className="fa fa-times fa-2x" />
             </div>
           </a>
           <a

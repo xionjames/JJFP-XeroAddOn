@@ -3,7 +3,9 @@ import React from "react";
 import {
   Button,
   Collapse,
+  Nav,
   Navbar,
+  NavItem,
   NavbarToggler,
   NavbarBrand,
   Container
@@ -81,6 +83,13 @@ class Header extends React.Component {
       this.sidebarToggle.current.classList.toggle("toggled");
     }
   }
+
+  syncData() {
+    alert("Se ha enviado una petición de sincronización");
+    window.location.href = '/admin/processes'
+    //return <Redirect to='/admin/processes' />
+  }
+
   render() {
     return (
       // add or remove classes depending if we are on full-screen-maps page or not
@@ -117,7 +126,13 @@ class Header extends React.Component {
             navbar
             className="justify-content-end"
           >
-            
+            <Nav navbar>
+              <NavItem>
+                <Button color="primary" onClick={() => this.syncData()}>
+                  <i className="fas fa-sync-alt" />&nbsp;&nbsp;Sincronizar
+                </Button>
+              </NavItem>
+            </Nav>
           </Collapse>
         </Container>
       </Navbar>
