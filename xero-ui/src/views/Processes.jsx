@@ -37,7 +37,10 @@ query Log($pid : String!){
   }
 }`;
 function ProcessesList(props) {
-  const handleProcess = event => props.onProcessChange(event.target.value);
+  const handleProcess = (event) => {
+    //alert(event.target.value);
+    props.onProcessChange(event.target.value);
+  };
 
   const { loading, error, data } = useQuery(
     PROCESSES_QUERY, 
@@ -60,7 +63,7 @@ function ProcessesList(props) {
         <td className="text-center">{it.State === 'COMPLETED' ? <i class="fa fa-check ok" /> : <i class="fa fa-times fail" />}</td>
         <td className="text-center">{it.UpdatedAt.replace('+00:00', '').replace('T', ' ')}</td>
         <td className="text-center">
-          <Button color="link" value={it._id} onClick={handleProcess}><i className="fa fa-eye"></i></Button>
+          <Button color="link" value={it._id} onClick={handleProcess.bind(this)}><i className="fa fa-eye"></i></Button>
         </td>
       </tr>
     ))
@@ -76,7 +79,7 @@ function LogList(props) {
       });
 
     if (loading) return (<tr><td colSpan="5" className="text-center">Loading data...</td></tr>);
-    if (error) return (<tr><td colSpan="5" className="text-center">{(props.processId ? error.message : 'Select one process first to see log.')}</td></tr>);
+    if (error) return (<tr><td colSpan="5" className="text-center">{(props.processId ? error.message : props.processId === '' ? 'Select one process first to see log.' : 'Ups! Something was wrong retrieving the data. Please, try again.')}</td></tr>);
 
     return (
       data.log.map(it => (
