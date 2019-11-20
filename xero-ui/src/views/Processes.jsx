@@ -38,10 +38,13 @@ query Log($pid : String!){
 }`;
 
 function ProcessesList() {
-  const { loading, error, data } = useQuery(PROCESSES_QUERY);
+  const { loading, error, data } = useQuery(PROCESSES_QUERY, {pollInterval: 5000, fetchPolicy: 'no-cache'});
 
   if (loading) return (<tr><td colSpan="5" className="text-center">Loading data...</td></tr>);
   if (error) return (<tr><td colSpan="5" className="text-center">Error! ${error.message}</td></tr>);
+  if (!loading && !error) {
+    data.processes = data.processes.sort((a,b) => a.StartedAt > b.StartedAt ? -1 : 1);
+  }
 
   return (
     data.processes.map(it => (

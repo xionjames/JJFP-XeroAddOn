@@ -12,6 +12,19 @@ import {
 } from "reactstrap";
 
 import routes from "routes.js";
+import ApolloClient from 'apollo-boost';
+import { gql } from "apollo-boost";
+
+const client = new ApolloClient({
+  uri: 'http://127.0.0.1:8080'
+});
+
+const SYNC_QUERY = gql`
+{
+  sync {
+    result
+  }
+}`;
 
 class Header extends React.Component {
   constructor(props) {
@@ -85,8 +98,15 @@ class Header extends React.Component {
   }
 
   syncData() {
-    alert("Se ha enviado una petición de sincronización");
-    window.location.href = '/admin/processes'
+    client
+    .query({
+      query: SYNC_QUERY,
+      options: {fetchPolicy: 'no-cache'}
+    })
+    .then(result => console.log(result));
+    alert('Se envia proceso de sincronización. Verifique el estado.');
+   // return (<DataSync />);
+   // window.location.href = '/admin/processes'
     //return <Redirect to='/admin/processes' />
   }
 

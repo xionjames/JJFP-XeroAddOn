@@ -127,13 +127,13 @@ $queryType = new ObjectType([
         'accounts' => [
             'type' => Type::listOf($accountType),
             'resolve' => function() {
-                return (new Accounts())->exec(Model::FIND);
+                return (new Accounts())->exec(Model::FIND, [], ['sort' => [ 'Name' => 1 ]]);
             }
         ],
         'vendors' => [
             'type' => Type::listOf($vendorType),
             'resolve' => function() {
-                return (new Vendors())->exec(Model::FIND);
+                return (new Vendors())->exec(Model::FIND, [], ['sort' => [ 'Name' => 1 ]]);
             }
         ],
         'processes' => [
@@ -161,7 +161,7 @@ $queryType = new ObjectType([
                         $r->Records = "Inserted: $i, Matched: $a, Modified: $m";
                     }
                 }
-
+                
                 return $result;
             }
         ],
