@@ -1,8 +1,11 @@
 
 import React from "react";
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/react-hooks';
 
 // reactstrap components
 import {
+  Button,
   Card,
   CardHeader,
   CardBody,
@@ -11,6 +14,66 @@ import {
   Row,
   Col
 } from "reactstrap";
+
+/* GraphQL begin */
+const PROCESSES_QUERY = gql`
+  {
+    processes {
+      Operation
+      StartedAt
+      State
+      UpdatedAt
+      _id
+    }
+  }`;
+
+const LOG_QUERY = gql`
+query Log($pid : String!){
+  log(processId: $pid) {
+    Action
+    State
+    Date
+    Records
+  }
+}`;
+
+function ProcessesList() {
+  const { loading, error, data } = useQuery(PROCESSES_QUERY);
+
+  if (loading) return (<tr><td colSpan="5" className="text-center">Loading data...</td></tr>);
+  if (error) return (<tr><td colSpan="5" className="text-center">Error! ${error.message}</td></tr>);
+
+  return (
+    data.processes.map(it => (
+      <tr>
+        <td className="text-center">{it.Operation === 'FETCH' ? <i class="fa fa-download" title="Fetch" /> : <i class="fa fa-upload" title="Fetch" />}</td>
+        <td className="text-center">{it.StartedAt.replace('+00:00', '').replace('T', ' ')}</td>
+        <td className="text-center">{it.State === 'COMPLETED' ? <i class="fa fa-check ok" /> : <i class="fa fa-times fail" />}</td>
+        <td className="text-center">{it.UpdatedAt.replace('+00:00', '').replace('T', ' ')}</td>
+        <td className="text-center">
+          <Button color="link" onClick=""><i className="fa fa-eye"></i></Button>
+        </td>
+      </tr>
+    ))
+  );
+}
+
+function LogList(props) {
+  const { loading, error, data } = useQuery(LOG_QUERY, {variables: {pid: props.processId}});
+
+  if (loading) return (<tr><td colSpan="5" className="text-center">Loading data...</td></tr>);
+  if (error) return (<tr><td colSpan="5" className="text-center">Error! ${error.message}</td></tr>);
+
+  return (
+    data.log.map(it => (
+      <tr>
+        <td>{it.Action} <br /> {it.Records ? <small>{it.Records}</small> : <i></i> }</td>
+        <td className="text-center">{it.State === 'OK' ? <i class="fa fa-check ok" /> : <i class="fa fa-times fail" />}</td>
+        <td className="text-center">{it.Date.replace('+00:00', '').replace('T', ' ')}</td>
+      </tr>
+    ))
+  );
+}
 
 class Processes extends React.Component {
   render() {
@@ -32,29 +95,13 @@ class Processes extends React.Component {
                       <tr>
                         <th className="text-center">Type</th>
                         <th className="text-center">Started At</th>
-                        <th className="text-center">Status</th>
+                        <th className="text-center">State</th>
                         <th className="text-center">Finished At</th>
+                        <th>&nbsp;</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td className="text-center"><i class="fa fa-download" title="Fetch" /></td>
-                        <td className="text-center">2019-11-16T00:15:59</td>
-                        <td className="text-center"><i class="fa fa-check ok" /></td>
-                        <td className="text-center">2019-11-16T00:16:00</td>
-                      </tr>
-                      <tr>
-                        <td className="text-center"><i class="fa fa-download" title="Fetch" /></td>
-                        <td className="text-center">2019-11-16T00:15:59</td>
-                        <td className="text-center"><i class="fa fa-times fail" /></td>
-                        <td className="text-center">2019-11-16T00:16:00</td>
-                      </tr>
-                      <tr>
-                        <td className="text-center"><i class="fa fa-download" title="Fetch" /></td>
-                        <td className="text-center">2019-11-16T00:15:59</td>
-                        <td className="text-center"><i class="fa fa-check ok" /></td>
-                        <td className="text-center">2019-11-16T00:16:00</td>
-                      </tr>
+                      <ProcessesList />
                     </tbody>
                   </Table>
                 </CardBody>
@@ -73,41 +120,12 @@ class Processes extends React.Component {
                     <thead className="text-primary">
                       <tr>
                         <th>Action</th>
-                        <th className="text-center">Status</th>
+                        <th className="text-center">State</th>
                         <th className="text-center">Updated At</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>Fecth operation started</td>
-                        <td className="text-center"><i class="fa fa-check ok" /></td>
-                        <td className="text-center">2019-11-16T18:03:41</td>
-                      </tr>
-                      <tr>
-                        <td>Retrieving Contacts</td>
-                        <td className="text-center"><i class="fa fa-check ok" /></td>
-                        <td className="text-center">2019-11-16T18:03:41</td>
-                      </tr>
-                      <tr>
-                        <td>Saving Vendors</td>
-                        <td className="text-center"><i class="fa fa-check ok" /></td>
-                        <td className="text-center">2019-11-16T18:03:41</td>
-                      </tr>
-                      <tr>
-                        <td>Retrieving Accounts<br /><small>58 records</small></td>
-                        <td className="text-center"><i class="fa fa-check ok" /></td>
-                        <td className="text-center">2019-11-16T18:03:41</td>
-                      </tr>
-                      <tr>
-                        <td>Saving Accounts<br /><small>10 inserted, 48 modified</small></td>
-                        <td className="text-center"><i class="fa fa-check ok" /></td>
-                        <td className="text-center">2019-11-16T18:03:41</td>
-                      </tr>
-                      <tr>
-                        <td>Fetch operation finished</td>
-                        <td className="text-center"><i class="fa fa-check ok" /></td>
-                        <td className="text-center">2019-11-16T18:03:41</td>
-                      </tr>
+                      <LogList processId="5dd22e027926ef15301ceba2" />
                     </tbody>
                   </Table>
                 </CardBody>

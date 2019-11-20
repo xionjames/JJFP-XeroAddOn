@@ -1,5 +1,7 @@
 
 import React from "react";
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/react-hooks';
 
 // reactstrap components
 import {
@@ -11,6 +13,69 @@ import {
   Row,
   Col
 } from "reactstrap";
+
+
+// For Accounts
+/* GraphQL begin */
+const ACCOUNTS_QUERY = gql`
+  {
+    accounts {
+      Code
+      Name
+      Type
+      Status
+      SavedAt
+    }
+  }`;
+
+const VENDORS_QUERY = gql`
+{
+  vendors {
+    Name
+    EmailAddress
+    ContactStatus
+    IsSupplier
+    SavedAt
+  }
+}`;
+
+function AccountList() {
+  const { loading, error, data } = useQuery(ACCOUNTS_QUERY);
+
+  if (loading) return (<tr><td colSpan="5" className="text-center">Loading data...</td></tr>);
+  if (error) return (<tr><td colSpan="5" className="text-center">Error! ${error.message}</td></tr>);
+
+  return (
+    data.accounts.map(it => (
+      <tr>
+        <td className="text-center">{it.Code}</td>
+        <td>{it.Name}</td>
+        <td className="text-center">{it.Type}</td>
+        <td className="text-center">{it.Status}</td>
+        <td className="text-center">{it.SavedAt}</td>
+      </tr>
+    ))
+  );
+}
+
+function VendorList() {
+  const { loading, error, data } = useQuery(VENDORS_QUERY);
+
+  if (loading) return (<tr><td colSpan="5" className="text-center">Loading data...</td></tr>);
+  if (error) return (<tr><td colSpan="5" className="text-center">Error! ${error.message}</td></tr>);
+
+  return (
+    data.vendors.map(it => (
+      <tr>
+        <td>{it.Name}</td>
+        <td>{it.EmailAddress}</td>
+        <td className="text-center">{it.Status}</td>
+        <td className="text-center">{it.IsSupplier}</td>
+        <td className="text-center">{it.SavedAt}</td>
+      </tr>
+    ))
+  );
+}
 
 class Data extends React.Component {
   render() {
@@ -38,27 +103,7 @@ class Data extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td className="text-center">970</td>
-                        <td>Owner A Share Capital</td>
-                        <td className="text-center">EQUITY</td>
-                        <td className="text-center">ACTIVE</td>
-                        <td className="text-center">2019-11-16T00:15:59</td>
-                      </tr>
-                      <tr>
-                        <td className="text-center">473</td>
-                        <td>Repairs and Maintenance</td>
-                        <td className="text-center">EXPENSE</td>
-                        <td className="text-center">ACTIVE</td>
-                        <td className="text-center">2019-11-16T00:15:59</td>
-                      </tr>
-                      <tr>
-                        <td className="text-center">300</td>
-                        <td>Purchases</td>
-                        <td className="text-center">EXPENSE</td>
-                        <td className="text-center">ACTIVE</td>
-                        <td className="text-center">2019-11-16T00:15:59</td>
-                      </tr>
+                      <AccountList />                      
                     </tbody>
                   </Table>
                 </CardBody>
@@ -84,27 +129,7 @@ class Data extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>Young Bros Transport</td>
-                        <td>rog@ybt.co</td>
-                        <td className="text-center">ACTIVE</td>
-                        <td className="text-center">YES</td>
-                        <td className="text-center">2019-11-16T18:03:41</td>
-                      </tr>
-                      <tr>
-                        <td>Young Bros Transport</td>
-                        <td>rog@ybt.co</td>
-                        <td className="text-center">ACTIVE</td>
-                        <td className="text-center">YES</td>
-                        <td className="text-center">2019-11-16T18:03:41</td>
-                      </tr>
-                      <tr>
-                        <td>Young Bros Transport</td>
-                        <td>rog@ybt.co</td>
-                        <td className="text-center">ACTIVE</td>
-                        <td className="text-center">YES</td>
-                        <td className="text-center">2019-11-16T18:03:41</td>
-                      </tr>
+                      <VendorList />
                     </tbody>
                   </Table>
                 </CardBody>
@@ -116,5 +141,7 @@ class Data extends React.Component {
     );
   }
 }
+
+
 
 export default Data;

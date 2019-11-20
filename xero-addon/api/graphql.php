@@ -16,6 +16,13 @@ use GraphQL\Type\Schema;
 use GraphQL\Error\FormattedError;
 use GraphQL\Error\Debug;
 
+
+/* Allow CORS */
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+header("Allow: GET, POST, OPTIONS, PUT, DELETE");
+
 // Read schema
 $schema = new Schema([
     'query' => $queryType
@@ -36,7 +43,7 @@ $data += ['query' => null, 'variables' => null];
 $debug = Debug::INCLUDE_DEBUG_MESSAGE | Debug::INCLUDE_TRACE;;
 
 try {
-    $result = GraphQL::executeQuery($schema, $data['query'], null, null, null);
+    $result = GraphQL::executeQuery($schema, $data['query'], null, null, $data['variables']);
     $output = $result->toArray($debug);
     $httpStatus = 200;
 } catch (\Exception $e) {
