@@ -1,14 +1,21 @@
 schema {
-    
+    query: Query
+}
+
+type Query {
+    accounts: Account
+    vendors: Vendor
+    processes: Process
+    log(processId: String) : [Log]
 }
 
 type Account {
-    xero: String,
-    code: String,
-    name: String,
-    type: String,
-    class: String,
-    status: String,
+    xero: String
+    code: String
+    name: String
+    type: String
+    class: String
+    status: String
     updateAt: String
 }
 
@@ -17,7 +24,7 @@ type Vendor {
     name: String,
     email: String,
     status: String,
-    updateAt: -string,
+    updateAt: String,
     isSupplier: Boolean,
     isCustomer: Boolean
 }
