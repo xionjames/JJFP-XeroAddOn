@@ -24,11 +24,35 @@ Setup MongoDB variables on `cfg/app.ini`
 
 ```
 [mongo]  
-host=localhost  
+host=localhost
 database=dbname
 user=username
 password=password  
 ```
+
+Set up Xero OAuth credentials on `cfg/app.ini`
+
+```
+[xero]
+key=your_key
+secret=your_secret
+certificate=xero/privatekey.pem
+callback=http://localhost/
+```
+
+Variable `certificate` can keep with that value.
+
+**Note:** This application supports Xero OAuth 1.0 authentication, for *Private Apps*. So, you must generate one certificate in order to create the *App* in depeloper.xero.com.
+If you are using Linux, you can generate this certificate with the following script
+
+```
+$ cd xero-addon
+$ cd cfg/xero
+$ chmod a+x generate_cert.sh
+$ ./generate_cert.sh
+```
+
+Now, gene
 
 ### Xero UI (Frontend)
 Go to frontend path
