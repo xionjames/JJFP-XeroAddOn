@@ -27,11 +27,11 @@ class Processes extends Model {
     /**
      * Insert the process record on mongo
      */
-    public function start() {
+    public function start($operation) {
         $result = $this->exec(
             Model::INSERT,
             array(
-                'Operation' => Processes::OPERATION_FETCH,
+                'Operation' => $operation,
                 'State'     => Processes::STATE_STARTED,
                 'StartedAt' => $this->getUTCDate(),
                 'Log'       => array(

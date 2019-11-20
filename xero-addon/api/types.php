@@ -5,7 +5,7 @@
 
 namespace JJFP\Api;
 
-require_once '../includes.php';
+require_once '../process/MainProcess.php';
 
 use GraphQL\Type\Definition\Type;
 use GraphQL\Type\Definition\ObjectType;
@@ -13,6 +13,7 @@ use JJFP\Db\Model;
 use JJFP\Db\Models\Accounts;
 use JJFP\Db\Models\Vendors;
 use JJFP\Db\Models\Processes;
+use JJFP\Sync\Process\MainProcess;
 use MongoDB\BSON\ObjectId;
 
 // Types for every object
@@ -109,6 +110,15 @@ $logType = new ObjectType([
     ]
 ]);
 
+$syncType = new ObjectType([
+    'name' => 'SyncProcess',
+    'fields' => [
+        'result' => [
+            'type' => Type::string()
+        ]
+    ]
+]);
+
 // --- Query Type
 
 $queryType = new ObjectType([
@@ -153,6 +163,15 @@ $queryType = new ObjectType([
                 }
 
                 return $result;
+            }
+        ],
+        'sync' => [
+            'type' => $syncType,
+            'resolve' => function($root, $args) {
+                $mp = new MainProcess();
+                return [
+                    'result' => $mp->process() ? "SUCCESS" : "FAIL"
+                ];
             }
         ]
     ]

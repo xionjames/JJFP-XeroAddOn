@@ -1,33 +1,51 @@
 <?php
+/**
+ * Principal class for fetch data from Xero and save in MongoDB
+ */
 
-namespace JJFP\Api;
-
-require_once '../includes.php';
+namespace JJFP\Sync;
 
 use JJFP\Xero\Retriever;
 use JJFP\Db\Model;
 use JJFP\Db\Models\Processes;
 use JJFP\Exception\ProcessException;
 
-class Tester {
+abstract class FetchProcess {
+    protected $relationships = array();
     private $proc;
 
-    public function process() {
-        // start process
-        $this->proc = new Processes();
-        $this->proc->start();
+    /**
+     * Just to obligate developers to initialize the $relationship array
+     */
+    abstract function initialize();
 
-        // retrieve and save
+    public function process() {
+        $this->initialize();
+        
         try {
-            $this->retrieveAndSave('Contact', 'Vendors');
-            $this->retrieveAndSave('Account', 'Accounts');
+            // start process
+            $this->proc = new Processes();
+            $this->proc->start(Processes::OPERATION_FETCH);
+
+            // retrieve and save
+            if (sizeof($this->relationships) == 0) {
+                $this->proc->finish('Nothing selected to sync');
+            }
+
+            foreach ($this->relationships as $xero => $mongo) {
+                $this->retrieveAndSave($xero, $mongo);
+            }
+
+             // finish OK 
+            $this->proc->finish();
+
+            return true;
         } catch (ProcessException $e) {
             // finish FAILED
             $this->proc->finish($e->getMessage());
+            
+            return false;
         }
-
-        // finish OK 
-        $this->proc->finish();
     }
 
     /**
@@ -35,7 +53,7 @@ class Tester {
      */
     private function retrieveAndSave($api, $model) {
         // retrieve 
-        $ret = new Retriever("Accounting\\$api");
+        $ret = new Retriever($api);
 
         $data = $ret->retrieve();
         if ($data == false) {
@@ -65,16 +83,4 @@ class Tester {
     }
 }
 
-
-$t = new Tester();
-$t->process();
-
-/*
-$ac = new Accounts();
-$result = $ac->exec(Model::FIND, [], [
-    'sort' => ['Name' => 1]
-]);
-
-print_r($result);
-*/
 ?>
