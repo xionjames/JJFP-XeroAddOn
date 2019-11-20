@@ -20,8 +20,30 @@ Vanhackathon Challenge - Xero Add On
 You must install from and back separatelly.
 
 ### Xero Addon (Backend, API)
-Esta es una prueba
+Setup MongoDB variables on `cfg/app.ini`
+
+```
+[mongo]  
+host=localhost  
+database=dbname
+user=username
+password=password  
+```
 
 ### Xero UI (Frontend)
-Esta es otra prueba
+Go to frontend path
+
+`$ cd xero-ui`
+
+Refresh nodejs packages
+
+`$ npm install`
+
+Start server
+
+`$ npm start`
+
+If webpage doesn't launch, just use your browser and navigate to
+
+`http://localhost:3000`
 
