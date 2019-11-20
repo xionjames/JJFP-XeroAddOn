@@ -24,3 +24,10 @@ Vanhackathon Challenge - Xero Add On
 </ul>
 
 # Install Instructions
+<ul>
+    <li><b>Xero Addon (Backend, API)</b></li>
+    Esta es una prueba
+
+    <li><b>Xero UI (Frontend)</b></li>
+    Esta es otra prueba
+</ul>
