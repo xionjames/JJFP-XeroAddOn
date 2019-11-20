@@ -1,46 +1,53 @@
 <?php
 /**
  * This file contains the main API for GraphQL.
+ * Please, run using command line:
+ * 
+ *    php -S localhost:8080 graphql.php
  * 
  */
 
 namespace JJFP\Api;
 
-require_once '../includes.php';
+require_once 'types.php';
 
 use GraphQL\GraphQL;
 use GraphQL\Type\Schema;
-use GraphQL\Utils\BuildSchema;
-use GraphQL\Utils\AST;
+use GraphQL\Error\FormattedError;
+use GraphQL\Error\Debug;
 
 // Read schema
-$document = AST::fromArray(require 'schema.php');
-$typeConfigDecorator = function () {};
-$schema = BuildSchema::build($document, $typeConfigDecorator);
+$schema = new Schema([
+    'query' => $queryType
+]);
 
-// read input
-$rawInput = file_get_contents('php://input');
-$input = json_decode($rawInput, true);
-$query = $input['query'];
-$variableValues = isset($input['variables']) ? $input['variables'] : null;
+// Parse incoming query and variables
+if (isset($_SERVER['CONTENT_TYPE']) && strpos($_SERVER['CONTENT_TYPE'], 'application/json') !== false) {
+    $raw = file_get_contents('php://input') ?: '';
+    $data = json_decode($raw, true) ?: [];
+} else {
+    $data = $_REQUEST;
+}
+
+$data += ['query' => null, 'variables' => null];
+
 
 // execute query
+$debug = Debug::INCLUDE_DEBUG_MESSAGE | Debug::INCLUDE_TRACE;;
+
 try {
-    $rootValue = ['prefix' => 'You said: '];
-    $result = GraphQL::executeQuery($schema, $query, $rootValue, null, $variableValues);
-    $output = $result->toArray();
+    $result = GraphQL::executeQuery($schema, $data['query'], null, null, null);
+    $output = $result->toArray($debug);
+    $httpStatus = 200;
 } catch (\Exception $e) {
-    $output = [
-        'errors' => [
-            [
-                'message' => $e->getMessage()
-            ]
-        ]
+    $httpStatus = 500;
+    $output['errors'] = [
+        'error' => FormattedError::createFromException($e, $debug)
     ];
 }
 
 // just... response
-header('Content-Type: application/json');
+header('Content-Type: application/json', true, $httpStatus);
 echo json_encode($output);
 
 ?>

@@ -21,9 +21,10 @@ abstract class Model {
 
     const XERO_ID_FIELD = 'xero_id';
 
-    public const UPDATE = 0;
-    public const INSERT = 1;
-    public const FIND   = 2;
+    public const UPDATE   = 0;
+    public const INSERT   = 1;
+    public const FIND     = 2;
+    public const FIND_ONE = 3;
 
 
     public function __construct() {
@@ -178,6 +179,14 @@ abstract class Model {
                     return $result->toArray();
                     break;
 
+                case Model::FIND_ONE:
+                        $this->logger->debug("Finding...");
+    
+                        $result = $coll->findOne($first, $second);
+    
+                        return $result;
+                        break;
+    
                 case Model::INSERT:
                     $this->logger->debug("Inserting new record...");
 
