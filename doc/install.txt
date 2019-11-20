@@ -1,5 +1,0 @@
-Prerrequisites
-
-- PHP extensions
-  - mbstring
-

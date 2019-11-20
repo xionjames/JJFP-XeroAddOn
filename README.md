@@ -43,6 +43,7 @@ callback=http://localhost/
 Variable `certificate` can keep with that value.
 
 **Note:** This application supports Xero OAuth 1.0 authentication, for *Private Apps*. So, you must generate one certificate in order to create the *App* in depeloper.xero.com.
+If you are using Windows, please follow instructions in xero website.
 If you are using Linux, you can generate this certificate with the following script
 
 ```
