@@ -149,7 +149,7 @@ class Header extends React.Component {
             <Nav navbar>
               <NavItem>
                 <Button color="primary" onClick={() => this.syncData()}>
-                  <i className="fas fa-sync-alt" />&nbsp;&nbsp;Sincronizar
+                  <i className="fas fa-sync-alt" />&nbsp;&nbsp;Synchronize
                 </Button>
               </NavItem>
             </Nav>
