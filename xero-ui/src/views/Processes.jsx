@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from 'react';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 
@@ -36,9 +36,15 @@ query Log($pid : String!){
     Records
   }
 }`;
+function ProcessesList(props) {
+  const handleProcess = event => props.onProcessChange(event.target.value);
 
-function ProcessesList() {
-  const { loading, error, data } = useQuery(PROCESSES_QUERY, {pollInterval: 5000, fetchPolicy: 'no-cache'});
+  const { loading, error, data } = useQuery(
+    PROCESSES_QUERY, 
+    {
+      pollInterval: 15000, 
+      fetchPolicy: 'no-cache'
+    });
 
   if (loading) return (<tr><td colSpan="5" className="text-center">Loading data...</td></tr>);
   if (error) return (<tr><td colSpan="5" className="text-center">Error! ${error.message}</td></tr>);
@@ -54,7 +60,7 @@ function ProcessesList() {
         <td className="text-center">{it.State === 'COMPLETED' ? <i class="fa fa-check ok" /> : <i class="fa fa-times fail" />}</td>
         <td className="text-center">{it.UpdatedAt.replace('+00:00', '').replace('T', ' ')}</td>
         <td className="text-center">
-          <Button color="link" onClick=""><i className="fa fa-eye"></i></Button>
+          <Button color="link" value={it._id} onClick={handleProcess}><i className="fa fa-eye"></i></Button>
         </td>
       </tr>
     ))
@@ -62,23 +68,38 @@ function ProcessesList() {
 }
 
 function LogList(props) {
-  const { loading, error, data } = useQuery(LOG_QUERY, {variables: {pid: props.processId}});
+    const { loading, error, data } = useQuery(
+      LOG_QUERY, 
+      {
+        variables: {pid: props.processId}, 
+        fetchPolicy: 'no-cache'
+      });
 
-  if (loading) return (<tr><td colSpan="5" className="text-center">Loading data...</td></tr>);
-  if (error) return (<tr><td colSpan="5" className="text-center">Error! ${error.message}</td></tr>);
+    if (loading) return (<tr><td colSpan="5" className="text-center">Loading data...</td></tr>);
+    if (error) return (<tr><td colSpan="5" className="text-center">{(props.processId ? error.message : 'Select one process first to see log.')}</td></tr>);
 
-  return (
-    data.log.map(it => (
-      <tr>
-        <td>{it.Action} <br /> {it.Records ? <small>{it.Records}</small> : <i></i> }</td>
-        <td className="text-center">{it.State === 'OK' ? <i class="fa fa-check ok" /> : <i class="fa fa-times fail" />}</td>
-        <td className="text-center">{it.Date.replace('+00:00', '').replace('T', ' ')}</td>
-      </tr>
-    ))
-  );
+    return (
+      data.log.map(it => (
+        <tr>
+          <td>{it.Action} <br /> {it.Records ? <small>{it.Records}</small> : <i></i> }</td>
+          <td className="text-center">{it.State === 'OK' ? <i class="fa fa-check ok" /> : <i class="fa fa-times fail" />}</td>
+          <td className="text-center">{it.Date.replace('+00:00', '').replace('T', ' ')}</td>
+        </tr>
+      ))
+    )
 }
 
 class Processes extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleProcessChange = this.handleProcessChange.bind(this);
+    this.state = {processId: ''};
+  }
+
+  handleProcessChange(pid) {
+    this.setState({processId: pid});
+  }
+
   render() {
     return (
       <>
@@ -104,7 +125,7 @@ class Processes extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      <ProcessesList />
+                      <ProcessesList onProcessChange={this.handleProcessChange} />
                     </tbody>
                   </Table>
                 </CardBody>
@@ -128,7 +149,7 @@ class Processes extends React.Component {
                       </tr>
                     </thead>
                     <tbody>
-                      <LogList processId="5dd22e027926ef15301ceba2" />
+                      <LogList processId={this.state.processId} />
                     </tbody>
                   </Table>
                 </CardBody>
