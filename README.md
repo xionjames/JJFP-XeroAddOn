@@ -64,6 +64,17 @@ $ php -S http://localhost:8080 MainProcess.php
 Enjoy it!
 
 ### Xero UI (Frontend)
+First, it is necessary set the GraphQL API URL. For this, just edit the `xero-ui/src/index.js` file and change the following lines
+
+```
+/* GraphQL */
+const client = new ApolloClient({
+  uri: 'http://localhost:8080'
+});
+```
+
+Now, let’s start the project.
+
 Go to frontend path
 
 `$ cd xero-ui`
@@ -79,4 +90,3 @@ Start server
 If webpage doesn't launch, just use your browser and navigate to
 
 `http://localhost:3000`
-
