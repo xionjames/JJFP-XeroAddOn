@@ -67,11 +67,13 @@ Enjoy it!
 First, it is necessary set the GraphQL API URL. For this, just edit the `xero-ui/src/index.js` file and change the following lines
 
 ```
-/* GraphQL */
 const client = new ApolloClient({
-  uri: 'http://localhost:8080'
+  uri: 'http://127.0.0.1:8080'
 });
 ```
+
+But... you have to change this URL in another file [yes, I know what you are thinking :( ]
+Edit the `xero-ui/src/components/Navbar.jsx` file too, please.
 
 Now, let’s start the project.
 
