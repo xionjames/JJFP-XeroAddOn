@@ -72,7 +72,8 @@ const client = new ApolloClient({
 });
 ```
 
-But... you have to change this URL in another file [yes, I know what you are thinking :( ]
+But... you have to change this URL in another file (Yes, I know it, I forgot to remove this code and just keep one initialisation but at this moment I’m unable to do it. So, I’m editing README file with my phone).
+
 Edit the `xero-ui/src/components/Navbar.jsx` file too, please.
 
 Now, let’s start the project.
