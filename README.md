@@ -53,7 +53,15 @@ $ chmod a+x generate_cert.sh
 $ ./generate_cert.sh
 ```
 
-Now, gene
+Now, to run the project, just use php command line to start a server with `process/MainProcess.php` file
+
+```
+$ cd xero-addon
+$ cd process
+$ php -S http://localhost:8080 MainProcess.php
+```
+
+Enjoy it!
 
 ### Xero UI (Frontend)
 Go to frontend path
