@@ -149,6 +149,7 @@ abstract class Model {
         $host = $this->cfg->get(Constants::INI_MONGO, Constants::INI_MONGO_HOST);
 
         $uri = "mongodb://$user:$pass@$host/$this->db?ssl=false";
+        $this->logger->debug("Connecting to MongoDB at $uri");
     }
 
     /**
