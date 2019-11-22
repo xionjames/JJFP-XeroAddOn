@@ -7,11 +7,14 @@ Vanhackathon Challenge - Xero Add On
   * MongoDB >= 3.6
   * OpenSSL
   * PHP >= 7.2
+  * Composer
   * PHP Enabled Modules:
     * php-mbstring
     * php-curl
     * php-xml
     * php-mongodb
+
+#### You can use `install.php` script in order to install dependencies.
 
 ### Xero UI (Frontend)
   * NodeJS / npm >= 6.0
@@ -53,12 +56,12 @@ $ chmod a+x generate_cert.sh
 $ ./generate_cert.sh
 ```
 
-Now, to run the project, just use php command line to start a server with `process/MainProcess.php` file
+Now, to run the project, just use php command line to start a server with `api/graphql.php` file
 
 ```
 $ cd xero-addon
-$ cd process
-$ php -S http://localhost:8080 MainProcess.php
+$ cd api
+$ php -S localhost:8080 graphql.php
 ```
 
 Enjoy it!
