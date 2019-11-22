@@ -53,9 +53,31 @@ $ chmod a+x generate_cert.sh
 $ ./generate_cert.sh
 ```
 
-Now, gene
+Now, to run the project, just use php command line to start a server with `process/MainProcess.php` file
+
+```
+$ cd xero-addon
+$ cd process
+$ php -S http://localhost:8080 MainProcess.php
+```
+
+Enjoy it!
 
 ### Xero UI (Frontend)
+First, it is necessary set the GraphQL API URL. For this, just edit the `xero-ui/src/index.js` file and change the following lines
+
+```
+const client = new ApolloClient({
+  uri: 'http://127.0.0.1:8080'
+});
+```
+
+But... you have to change this URL in another file (Yes, I know it, I forgot to remove this code and just keep one initialisation but at this moment I’m unable to do it. So, I’m editing README file with my phone).
+
+Edit the `xero-ui/src/components/Navbar.jsx` file too, please.
+
+Now, let’s start the project.
+
 Go to frontend path
 
 `$ cd xero-ui`
@@ -71,4 +93,3 @@ Start server
 If webpage doesn't launch, just use your browser and navigate to
 
 `http://localhost:3000`
-
